@@ -1,6 +1,7 @@
 from flask import Flask, render_template
 
 from paho.mqtt import client as mqtt_client
+from app import app
 
 app = Flask(__name__)
 #Set the Hostname, Port & TopicName
