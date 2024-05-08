@@ -1,7 +1,7 @@
 from flask import Flask, render_template
 
 from paho.mqtt import client as mqtt_client
-from app import app
+from app import app as application
 
 app = Flask(__name__)
 #Set the Hostname, Port & TopicName
@@ -130,7 +130,7 @@ def send_srb_data(client):
 		print("Send '{msg}' to topic '{topic}'")
 
 if __name__ == "__main__":
-    app.run(port=5001)
+    application.run()
 
 
 
